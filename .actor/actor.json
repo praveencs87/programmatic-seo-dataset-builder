@@ -1,0 +1,36 @@
+{
+    "actorSpecification": 1,
+    "name": "programmatic-seo-dataset-builder",
+    "title": "Programmatic SEO Dataset Builder",
+    "description": "Generate massive location × service keyword datasets for programmatic SEO campaigns in seconds.",
+    "version": "1.0",
+    "input": "./input_schema.json",
+    "dockerfile": "./Dockerfile",
+    "minMemoryMbytes": 128,
+    "maxMemoryMbytes": 512,
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingEvents": [
+        {
+            "eventName": "apify-actor-start",
+            "pricePerEvent": 0.05,
+            "description": "Base fee for starting the process"
+        },
+        {
+            "eventName": "row-generated",
+            "pricePerEvent": 0.0002,
+            "description": "Charged per row generated ($0.20 per 1k rows)"
+        }
+    ],
+    "isPublic": true,
+    "seoTitle": "Programmatic SEO Dataset Builder | Location × Service Keywords",
+    "seoDescription": "Generate massive location × service keyword datasets for programmatic SEO campaigns. Built-in city databases for US, India, and UK.",
+    "categories": [
+        "SEO",
+        "MARKETING"
+    ],
+    "defaultRunOptions": {
+        "build": "latest",
+        "timeoutSecs": 600,
+        "memoryMbytes": 128
+    }
+}

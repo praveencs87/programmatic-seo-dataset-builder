@@ -1,0 +1,48 @@
+{
+    "title": "Programmatic SEO Dataset Builder Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "services": {
+            "title": "Services / Keywords",
+            "type": "array",
+            "description": "List of service or product keywords (e.g. plumber, electrician, web designer).",
+            "editor": "stringList",
+            "prefill": ["plumber", "electrician", "HVAC repair"]
+        },
+        "locations": {
+            "title": "Custom Locations (optional)",
+            "type": "array",
+            "description": "List of custom locations. If empty and a country is selected, the built-in city database is used.",
+            "editor": "stringList"
+        },
+        "country": {
+            "title": "Auto-fill Country Cities",
+            "type": "string",
+            "description": "Select a country to auto-fill locations from the built-in city database (US, IN, UK). Ignored if custom locations are provided.",
+            "editor": "select",
+            "enum": ["", "US", "IN", "UK"],
+            "enumTitles": ["None (use custom locations)", "United States", "India", "United Kingdom"],
+            "default": ""
+        },
+        "titleTemplates": {
+            "title": "Page Title Templates",
+            "type": "array",
+            "description": "Use {service} and {location} as placeholders.",
+            "editor": "stringList",
+            "prefill": [
+                "Best {service} in {location}",
+                "Top {service} Services in {location}",
+                "Affordable {service} in {location}"
+            ]
+        },
+        "slugTemplate": {
+            "title": "URL Slug Template",
+            "type": "string",
+            "description": "Use {service} and {location} as placeholders.",
+            "editor": "textfield",
+            "prefill": "{service}-{location}"
+        }
+    },
+    "required": ["services", "titleTemplates"]
+}

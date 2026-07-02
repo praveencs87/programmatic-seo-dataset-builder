@@ -1,0 +1,9 @@
+{
+    "services": ["plumber", "electrician", "HVAC repair"],
+    "country": "US",
+    "titleTemplates": [
+        "Best {service} in {location}",
+        "Top {service} Services in {location}"
+    ],
+    "slugTemplate": "{service}-{location}"
+}
