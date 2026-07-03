@@ -1,3 +1,4 @@
+import { armKillSwitch, disarmKillSwitch } from './utils/timeoutManager.js';
 import { Actor, log } from 'apify';
 import { CITIES } from './cities.js';
 
